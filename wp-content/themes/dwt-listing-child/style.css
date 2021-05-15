@@ -1,0 +1,62 @@
+/*
+Theme Name: DWT Listing Child
+Description: DWT Listing a complete directory listing for any type of business listing
+Author: Scripts Bundle
+Theme URI: http://dwt-listing.scriptsbundle.com/
+Author URI: http://scriptsbundle.com/
+Version: 0.0.1
+Template: dwt-listing
+License: Themeforest Split Licence
+License URI: https://themeforest.net/user/scriptsbundle/
+Text Domain: dwt-listing
+Tags: translation-ready,theme-options, left-sidebar, right-sidebar, grid-layout, custom-menu, custom-logo,featured-images,  sticky-post,  threaded-comments
+*/
+
+#youclass {
+    margin: 0 auto;
+}
+
+.new-hero-explore-section::before {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.dwt-new-hero span.sub-head {
+    color: #fff;
+    font-style: italic;
+}
+
+#address_location {
+    float: none;
+}
+
+.l_map_form #map {
+    height: 360px;
+    width: 100%;
+
+}
+
+.header-top .header-top-profile ul li.ad-listing-btn {
+    border: 1px solid #2441e7;
+}
+
+.header-top .header-top-profile ul li.ad-listing-btn a {
+    background-color: #2441e7;
+}
+
+.header-top .top-search-form input {
+    background-color: #edeff7;
+    border: 1px solid #edeff7;
+    border-radius: 25px;
+    color: #555555;
+    font-size: 14px;
+}
+
+.header-type-3 .header-top .typeahead__container button {
+    background-color: transparent !important;
+    border: 0 solid #ffffff !important;
+    padding: .9rem 1.3rem;
+}
+
+.header-type-3 .header-top .menu-logo img {
+    margin-top: 0!important;
+}
