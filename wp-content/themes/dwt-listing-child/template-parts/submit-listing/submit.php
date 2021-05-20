@@ -1,4 +1,4 @@
-<?php
+z<?php
 
 global $dwt_listing_options;
 if (dwt_listing_text('dwt_map_selection') == "google_map" && dwt_listing_text('gmap_api_key') != "" && dwt_listing_text('dwt_listing_enable_map') == "1") {

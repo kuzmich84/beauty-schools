@@ -9,6 +9,7 @@ add_action( 'wp_enqueue_scripts', 'dwt_listing_child_scripts' );
 function dwt_listing_child_scripts(){
     wp_enqueue_style( 'style-suggestions', 'https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css');
     wp_enqueue_style('parent-theme-css', get_template_directory_uri() .'/style.css' );
+    wp_enqueue_style('udemy-css', get_stylesheet_directory_uri().'/assets/css/style.css');
 
     wp_enqueue_script( 'jquery-ajax--script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', '', '', true);
     wp_enqueue_script( 'suggestions-jquery', 'https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js','', '', true);
