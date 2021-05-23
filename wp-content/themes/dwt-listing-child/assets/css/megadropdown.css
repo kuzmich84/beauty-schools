@@ -70,7 +70,7 @@
 .vertical-wrapper .content-vertical {
     background-color: transparent;
     border-radius: 5px;
-    left: 0;
+    left: 20%;
     margin: 18px 0 0 0;
     min-width: 322px;
     padding: 0;
@@ -94,6 +94,8 @@
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
+    border: 1px solid #dcdacb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .vertical-wrapper:hover .content-vertical {
@@ -120,22 +122,22 @@
     -o-border-radius: 0;
 }
 
-.vertical-wrapper .content-vertical .mega-vertical-menu:before {
-    content: "";
-    height: 0;
-    left: 24px;
-    position: absolute;
-    top: -10px;
-    width: 0;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
-    border-left: 11px solid transparent;
-    border-right: 11px solid transparent;
-    border-bottom: 11px solid #191919;
-}
+/*.vertical-wrapper .content-vertical .mega-vertical-menu:before {*/
+/*    content: "";*/
+/*    height: 0;*/
+/*    left: 24px;*/
+/*    position: absolute;*/
+/*    top: -10px;*/
+/*    width: 0;*/
+/*    -webkit-transition: all 0.2s ease-in-out;*/
+/*    -moz-transition: all 0.2s ease-in-out;*/
+/*    -ms-transition: all 0.2s ease-in-out;*/
+/*    -o-transition: all 0.2s ease-in-out;*/
+/*    transition: all 0.2s ease-in-out;*/
+/*    border-left: 11px solid transparent;*/
+/*    border-right: 11px solid transparent;*/
+/*    border-bottom: 11px solid #ffffff;*/
+/*}*/
 
 .vertical-wrapper .content-vertical .mega-vertical-menu > li {
     background-color: transparent;
@@ -181,7 +183,7 @@
     float: left;
     padding: 13px 30px;
     position: relative;
-    width: 100%;
+    width: 50%;
     -webkit-transition: all 0.1s ease-in;
     -o-transition: all 0.1s ease-in;
     transition: all 0.1s ease-in;
@@ -205,7 +207,7 @@
 .vertical-wrapper .content-vertical .mega-vertical-menu > li .dropdown-menu {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 20%;
     z-index: 1000;
     display: none;
     float: left;

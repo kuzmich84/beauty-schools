@@ -3,6 +3,10 @@
 add_action( 'after_setup_theme', 'my_child_theme_setup' );
 function my_child_theme_setup(){
     load_child_theme_textdomain( 'dwt-listing', get_stylesheet_directory() . '/languages' );
+
+    function theme_register_nav_menu() {
+        register_nav_menu( 'primary', 'Primary Menu' );
+    }
 }
 
 add_action( 'wp_enqueue_scripts', 'dwt_listing_child_scripts' );
@@ -14,6 +18,7 @@ function dwt_listing_child_scripts(){
     wp_enqueue_script( 'jquery-ajax--script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', '', '', true);
     wp_enqueue_script( 'suggestions-jquery', 'https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js','', '', true);
     wp_enqueue_script( 'dadata-script', get_stylesheet_directory_uri().'/scripts/dadata.js', '', '', true);
+    wp_enqueue_script( 'my-custom-script', get_stylesheet_directory_uri().'/scripts/my-custom.js', '', '', true);
 
 
     /**
@@ -75,3 +80,9 @@ function activate_dwt_listing_child() {
         'manage_categories' => true, // Allows user to manage post categories
     ));
 }
+
+
+/**
+ * Класс для кастомизации вывода категорий
+ */
+

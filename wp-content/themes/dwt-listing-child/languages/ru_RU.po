@@ -4,7 +4,7 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
 "Project-Id-Version: DWT Listing\n"
 "POT-Creation-Date: 2020-04-21 11:42+0500\n"
-"PO-Revision-Date: 2021-05-18 16:36+0300\n"
+"PO-Revision-Date: 2021-05-22 13:13+0300\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -6859,7 +6859,7 @@ msgstr ""
 #: template-parts/listing-search/widgets/sidebar/categories.php:10
 #: template-parts/listing-search/widgets/topbar/topbar-widgets.php:110
 msgid "All Categories"
-msgstr ""
+msgstr "Все категории"
 
 #: template-parts/listing-search/widgets/map/map-widgets.php:160
 #: template-parts/listing-search/widgets/sidebar/l_tags.php:8

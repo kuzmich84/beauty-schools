@@ -16,9 +16,8 @@ if (!function_exists('dwt_listing_site_logo')) {
         $class_name = ($header_logo_type == 2) ? 'header-top-logo' : 'menu-logo';
         return '<ul class="' . esc_attr($class_name) . '">
 		  <li> <a href="' . esc_url(home_url("/")) . '"> 
-			<img src="' . esc_url($logo) . '" alt="' . __("logo", "dwt-listing") . '" class="img-responsive"> </a> 
-		   </li>
-		</ul>';
+			<img src="' . esc_url($logo) . '" alt="' . __("logo", "dwt-listing") . '" class="img-responsive"></a> 
+		   </li>		</ul>';
     }
 
 }

@@ -64,6 +64,7 @@ add_image_size('dwt_listing_about_image', 260, 260, true);
 // This theme uses wp_nav_menu() in one location.
 register_nav_menus(array(
     'main_menu' => esc_html__('DWT Listing Main Menu', 'dwt-listing'),
+    'category_menu' => esc_html__('Category Menu', 'dwt-listing'),
 ));
 /*
  * Switch default core markup for search form, comment form, and comments

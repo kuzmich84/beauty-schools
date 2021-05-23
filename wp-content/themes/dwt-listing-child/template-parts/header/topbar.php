@@ -35,11 +35,11 @@ if (isset($dwt_listing_options["dwt_listing_topbar"]) && $dwt_listing_options["d
                                 if ($sel_image_link[0] != "") {
                                     $final_img = $sel_image_link[0];
                                 } else {
-                                    $final_img = esc_url(trailingslashit(get_template_directory_uri()) . 'assets/images/global.png');
+                                    $final_img = esc_url(trailingslashit(get_template_directory_uri()) . 'assets/images/locator.svg');
                                 }
                             } else {
                                 $loc_name = esc_html__('All Locations', 'dwt-listing');
-                                $final_img = esc_url(trailingslashit(get_template_directory_uri()) . 'assets/images/global.png');
+                                $final_img = esc_url(trailingslashit(get_template_directory_uri()) . 'assets/images/locator.svg');
                             }
                             ?>
                             <ul class="list-inline">
@@ -53,7 +53,7 @@ if (isset($dwt_listing_options["dwt_listing_topbar"]) && $dwt_listing_options["d
                                     <ul class="dropdown-menu pull-right <?php echo esc_attr($flip); ?>">
                                         <li>
                                             <a href="javascript:void(0)" data-loc-id="" class="top-loc-selection">
-                                                <img src="<?php echo esc_url(trailingslashit(get_template_directory_uri()) . 'assets/images/global.png'); ?>"
+                                                <img src="<?php echo esc_url(trailingslashit(get_template_directory_uri()) . 'assets/images/locator.svg'); ?>"
                                                      alt="<?php echo esc_attr__('All Locations', 'dwt-listing'); ?>"/>
                                                 <span><?php echo esc_html__('All Locations', 'dwt-listing'); ?></span>
                                             </a>
