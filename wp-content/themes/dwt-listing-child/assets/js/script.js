@@ -392,47 +392,47 @@
     }
 
     /*  One-Grid-Owl-carousel  */
-    if($('.home5_slider').length){
-        $('.home5_slider').owlCarousel({
-            animateIn: 'fadeIn',
-            loop:true,
-            margin:15,
-            dots:true,
-            nav:false,
-            rtl:false,
-            autoplayHoverPause:false,
-            autoplay: false,
-            smartSpeed: 2000,
-            singleItem: true,
-            navText: [
-              '<i class="flaticon-left-arrow"></i> <span>PR </br> EV</span>',
-              '<span>NE </br> XT</span> <i class="flaticon-right-arrow-1"></i>'
-            ],
-            responsive: {
-                320:{
-                    items: 1,
-                    center: false
-                },
-                480:{
-                    items: 1,
-                    center: false
-                },
-                600: {
-                    items: 1,
-                    center: false
-                },
-                768: {
-                    items: 1
-                },
-                992: {
-                    items: 1
-                },
-                1200: {
-                    items: 1
-                }
-            }
-        })
-    }
+    // if($('.home5_slider').length){
+    //     $('.home5_slider').owlCarousel({
+    //         animateIn: 'fadeIn',
+    //         loop:true,
+    //         margin:15,
+    //         dots:true,
+    //         nav:false,
+    //         rtl:false,
+    //         autoplayHoverPause:false,
+    //         autoplay: false,
+    //         smartSpeed: 2000,
+    //         singleItem: true,
+    //         navText: [
+    //           '<i class="flaticon-left-arrow"></i> <span>PR </br> EV</span>',
+    //           '<span>NE </br> XT</span> <i class="flaticon-right-arrow-1"></i>'
+    //         ],
+    //         responsive: {
+    //             320:{
+    //                 items: 1,
+    //                 center: false
+    //             },
+    //             480:{
+    //                 items: 1,
+    //                 center: false
+    //             },
+    //             600: {
+    //                 items: 1,
+    //                 center: false
+    //             },
+    //             768: {
+    //                 items: 1
+    //             },
+    //             992: {
+    //                 items: 1
+    //             },
+    //             1200: {
+    //                 items: 1
+    //             }
+    //         }
+    //     })
+    // }
 
     /*  One-Grid-Owl-carousel  */
     if($('.blog_slider_home1').length){

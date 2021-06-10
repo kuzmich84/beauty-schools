@@ -1,5 +1,8 @@
 <?php
 
+define('WPEDUMY_DIR_JS', get_stylesheet_directory_uri() . '/assets/js');
+define('WPEDUMY_DIR_CSS', get_stylesheet_directory_uri() . '/assets/css');
+
 add_action('after_setup_theme', 'my_child_theme_setup');
 function my_child_theme_setup()
 {
@@ -16,8 +19,8 @@ function dwt_listing_child_scripts()
 {
     wp_enqueue_style('style-suggestions', 'https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/css/suggestions.min.css');
     wp_enqueue_style('parent-theme-css', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('udemy-css', get_stylesheet_directory_uri() . '/assets/css/style.css');
-    wp_enqueue_style('udemy-slider-css', get_stylesheet_directory_uri() . '/assets/css/slider.css');
+//    wp_enqueue_style('udemy-bootstrap-4-6-css', WPEDUMY_DIR_CSS . '/bootstrap-4-6.min.css');
+    wp_enqueue_style('udemy-css', WPEDUMY_DIR_CSS . '/style.css');
 
     wp_enqueue_script('jquery-ajax--script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', '', '', true);
     wp_enqueue_script('suggestions-jquery', 'https://cdn.jsdelivr.net/npm/suggestions-jquery@20.3.0/dist/js/jquery.suggestions.min.js', '', '', true);
@@ -25,12 +28,25 @@ function dwt_listing_child_scripts()
     wp_enqueue_script('my-custom-script', get_stylesheet_directory_uri() . '/scripts/my-custom.js', '', '', true);
 
 
-    wp_enqueue_script('edumy-slider-script', get_stylesheet_directory_uri() . '/assets/js/slider.js', '', '', true);
-    wp_enqueue_script('bootstrap-script', get_stylesheet_directory_uri() . '/assets/js/bootstrap.min.js', '', '', true);
-    wp_enqueue_script('bootstrap-select-script', get_stylesheet_directory_uri() . '/assets/js/bootstrap-select.min.js', '', '', true);
-    wp_enqueue_script('edumy-script', get_stylesheet_directory_uri() . '/assets/js/script.js', '', '', true);
-
-
+    // Подключение скриптов Edumy
+//    wp_enqueue_script('edumy-jquery-bootstrap-4-6-script', WPEDUMY_DIR_JS . '/bootstrap-4-6.min.js', '', '', true);
+//    wp_enqueue_script('edumy-jquery-migrate-3-0-0-script', WPEDUMY_DIR_JS . '/jquery-migrate-3.0.0.min.js', '', '', true);
+//    wp_enqueue_script('edumy-popper-script', WPEDUMY_DIR_JS . '/popper.min.js', '', '', true);
+//    wp_enqueue_script('edumy-jquery.mmenu-script', WPEDUMY_DIR_JS . '/jquery.mmenu.all.js', ['jquery'], '', true);
+//    wp_enqueue_script('edumy-ace-responsive-menu-script', WPEDUMY_DIR_JS . '/ace-responsive-menu.js', '', '', true);
+//    wp_enqueue_script('bootstrap-select-script', WPEDUMY_DIR_JS . '/bootstrap-select.min.js', '', '', true);
+//    wp_enqueue_script('edumy-isotop-script', WPEDUMY_DIR_JS . '/isotop.js', '', '', true);
+//    wp_enqueue_script('edumy-snackbar-script', WPEDUMY_DIR_JS . '/snackbar.min.js', '', '', true);
+//    wp_enqueue_script('edumy-simplebar-script', WPEDUMY_DIR_JS . '/simplebar.js', '', '', true);
+//    wp_enqueue_script('edumy-parallax-script', WPEDUMY_DIR_JS . '/parallax.js', '', '', true);
+//    wp_enqueue_script('edumy-scrollto-script', WPEDUMY_DIR_JS . '/scrollto.js', '', '', true);
+//    wp_enqueue_script('edumy-jquery-scrolltofixed-script', WPEDUMY_DIR_JS . '/jquery-scrolltofixed-min.js', ['jquery'], '', true);
+//    wp_enqueue_script('edumy-jquery-counterup-script', WPEDUMY_DIR_JS . '/jquery.counterup.js',['jquery'], '', true);
+//    wp_enqueue_script('edumy-wow-script', WPEDUMY_DIR_JS . '/wow.min.js', '', '', true);
+//    wp_enqueue_script('edumy-progressbar-script', WPEDUMY_DIR_JS . '/progressbar.js', '', '', true);
+//    wp_enqueue_script('edumy-slider-script', WPEDUMY_DIR_JS. '/slider.js', ['jquery'], '', true);
+//    wp_enqueue_script('edumy-timepicker-script', WPEDUMY_DIR_JS . '/timepicker.js', '', '', true);
+//    wp_enqueue_script('edumy-script', WPEDUMY_DIR_JS . '/script.js', ['jquery'], '', true);
 
     /**
      * Подключеам скрипт yandex карты
@@ -125,26 +141,37 @@ if (function_exists('vc_map')) {
             'show_settings_on_create' => true,
             // don't show params window after adding
 
-            'icon'=> 'icon-vc-edumy',
+            'icon' => 'icon-vc-edumy',
 
 
             'weight' => -5,
             // Depends on ordering in list, Higher weight first
 
-            'front_enqueue_js' => get_stylesheet_directory_uri().'/assets/js/slider.js',
 
             'params' => array(
                 array(
                     "type" => "textfield",
-                    "heading" => __("Chart value(1-100)", "edumy"),
-                    "param_name" => "value",
-                    "description" => __("Chart value(number).", "edumy")
+                    "heading" => __("Text title", "edumy"),
+                    "param_name" => "title_value",
+                    "description" => __("Enter text title.", "edumy")
                 ),
                 array(
-                    "type" => "attach_image",
-                    "heading" => __("Photo Join", "edumy"),
-                    "param_name" => "join_photo",
-                    "description" => __("Upload photo", "edumy")
+                    "type" => "textarea",
+                    "heading" => __("Text Join", "edumy"),
+                    "param_name" => "join_text",
+                    "description" => __("Enter text", "edumy")
+                ),
+                array(
+                    "type" => "textfield",
+                    "heading" => __("Text btn", "edumy"),
+                    "param_name" => "text_btn",
+                    "description" => __("Enter text btn.", "edumy")
+                ),
+                array(
+                    'type' => 'css_editor',
+                    'heading' => __( 'Css', 'edumy'),
+                    'param_name' => 'css',
+                    'group' => __( 'Design options', 'edumy' ),
                 ),
             )
         )
